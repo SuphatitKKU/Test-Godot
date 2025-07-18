@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://uiuqvf8ju81q"]
+[gd_scene load_steps=2 format=3 uid="uid://uiuqvf8ju81q"]
+
+[ext_resource type="Texture2D" uid="uid://oenc0dgwaky7" path="res://assets/img/app_icon/case.svg" id="1_b4fx3"]
 
 [node name="TestByDove" type="Node2D"]
+
+[node name="Case" type="Sprite2D" parent="."]
+position = Vector2(338, 175)
+texture = ExtResource("1_b4fx3")
