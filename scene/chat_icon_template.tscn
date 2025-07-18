@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkakw0smqretd"]
+
+[ext_resource type="Texture2D" uid="uid://b78h800kthuuu" path="res://assets/img/user_chat.png" id="1_aipas"]
+[ext_resource type="Texture2D" uid="uid://dg7p01msegu8n" path="res://assets/img/demo_cilent_pic/3.svg" id="2_3l1lg"]
+[ext_resource type="FontFile" uid="uid://b7if6iny5c6gk" path="res://assets/font/NotoSansThai-VariableFont_wdth,wght.ttf" id="3_rdyyl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f08rc"]
+font = ExtResource("3_rdyyl")
+font_size = 100
+
+[node name="chat_icon_template" type="TextureButton"]
+texture_normal = ExtResource("1_aipas")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 28.0
+offset_right = 146.0
+offset_bottom = 167.0
+texture = ExtResource("2_3l1lg")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.253
+anchor_top = 0.1
+anchor_right = 0.528
+anchor_bottom = 0.215
+offset_left = 37.79
+offset_top = 10.0
+offset_right = 150.04
+offset_bottom = 139.0
+text = "แม่"
+label_settings = SubResource("LabelSettings_f08rc")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 573.0
+offset_bottom = 200.0

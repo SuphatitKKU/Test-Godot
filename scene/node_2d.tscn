@@ -1,0 +1,1451 @@
+[gd_scene load_steps=81 format=3 uid="uid://dxolj4wittthb"]
+
+[ext_resource type="Texture2D" uid="uid://cmbmtk6sp5phm" path="res://assets/img/Desktop.png" id="1_guiot"]
+[ext_resource type="Script" uid="uid://yybv3jgaowck" path="res://scene/node_2d.gd" id="1_gvr3l"]
+[ext_resource type="Script" uid="uid://dxb5o4wxkl4np" path="res://scene/windows_maneger.gd" id="2_ppd22"]
+[ext_resource type="PackedScene" uid="uid://lvlscd8b1bii" path="res://scene/contentWindow.tscn" id="3_3cebx"]
+[ext_resource type="Script" uid="uid://dvnryc5kqg85b" path="res://scene/chat.gd" id="4_462ap"]
+[ext_resource type="Texture2D" uid="uid://cxfxnpocb62g0" path="res://assets/img/Windows.png" id="5_5qbti"]
+[ext_resource type="FontFile" uid="uid://b7if6iny5c6gk" path="res://assets/font/NotoSansThai-VariableFont_wdth,wght.ttf" id="6_gvr3l"]
+[ext_resource type="Texture2D" uid="uid://b78h800kthuuu" path="res://assets/img/user_chat.png" id="8_sypnp"]
+[ext_resource type="PackedScene" uid="uid://c2kyx7mqeylgl" path="res://scene/chat_template.tscn" id="9_s0fja"]
+[ext_resource type="Texture2D" uid="uid://dihs4rme3ycui" path="res://assets/img/demo_cilent_pic/1.svg" id="10_0g8r3"]
+[ext_resource type="Texture2D" uid="uid://dg7p01msegu8n" path="res://assets/img/demo_cilent_pic/3.svg" id="11_123pn"]
+[ext_resource type="Texture2D" uid="uid://bmf63kp5rpn27" path="res://assets/img/demo_cilent_pic/2.svg" id="12_3u7g2"]
+[ext_resource type="Texture2D" uid="uid://uq3gceil3ubm" path="res://assets/img/app_icon/chat.svg" id="12_123pn"]
+[ext_resource type="Texture2D" uid="uid://dyi65skj5uoet" path="res://assets/img/BgChat/bg_chat.png" id="12_su6sf"]
+[ext_resource type="Texture2D" uid="uid://gx7qrcjcjkvh" path="res://assets/img/app_icon/notification.svg" id="13_3u7g2"]
+[ext_resource type="Texture2D" uid="uid://l81dtd8h8via" path="res://assets/img/Rectangle 35.png" id="13_nl3on"]
+[ext_resource type="Texture2D" uid="uid://oenc0dgwaky7" path="res://assets/img/app_icon/case.svg" id="14_f08rc"]
+[ext_resource type="Texture2D" uid="uid://cxv84dk227ltm" path="res://assets/img/user_chat (1).png" id="14_mpuhk"]
+[ext_resource type="Script" uid="uid://bvbmqeb41t460" path="res://scene/case.gd" id="15_3u7g2"]
+[ext_resource type="PackedScene" uid="uid://bkakw0smqretd" path="res://scene/chat_icon_template.tscn" id="16_el7ve"]
+[ext_resource type="Texture2D" uid="uid://drm24nioaaiwt" path="res://assets/img/Arrow.png" id="17_yfstv"]
+[ext_resource type="Texture2D" uid="uid://cr3o64loi0y7u" path="res://icon.svg" id="18_nl3on"]
+[ext_resource type="Script" uid="uid://4qn6x7r38tih" path="res://scene/guideline.gd" id="20_mpuhk"]
+[ext_resource type="PackedScene" uid="uid://c7wy1opqkv6oy" path="res://scene/case_problem.tscn" id="20_ssc4f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bapa2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cw5uo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x33gs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2paaw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qoa54"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dc58s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aal8k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p0rpq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gyukw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_up1iy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6wqfp"]
+
+[sub_resource type="Animation" id="Animation_42d7r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NinePatchRect:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(351, 334)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NinePatchRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NinePatchRect:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(619, 124)]
+}
+
+[sub_resource type="Animation" id="Animation_sypnp"]
+resource_name = "WindowsPopout"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NinePatchRect:size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(968, 719), Vector2(351, 334)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NinePatchRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_cb6ix"]
+resource_name = "WindowsPopup"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NinePatchRect:size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(351, 334), Vector2(968, 719)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NinePatchRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(619, 124)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sypnp"]
+_data = {
+&"RESET": SubResource("Animation_42d7r"),
+&"WindowsPopout": SubResource("Animation_sypnp"),
+&"WindowsPopup": SubResource("Animation_cb6ix")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_bapa2"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_k01lb"]
+resource_local_to_scene = true
+font = ExtResource("6_gvr3l")
+font_size = 24
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_123pn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3u7g2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f08rc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_462ap"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5qbti"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gvr3l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k01lb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_42d7r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sypnp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0g8r3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cb6ix"]
+
+[sub_resource type="Theme" id="Theme_gvr3l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f08rc"]
+font = ExtResource("6_gvr3l")
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_yfstv"]
+font_size = 80
+
+[sub_resource type="Animation" id="Animation_k01lb"]
+resource_name = "Chat_popout"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("chat_screen:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-41, 304), Vector2(-41, 1004)]
+}
+
+[sub_resource type="Animation" id="Animation_5qbti"]
+resource_name = "Chat_popup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("chat_screen:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.99),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-41, 1004), Vector2(-41, 304)]
+}
+
+[sub_resource type="Animation" id="Animation_gvr3l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("chat_screen:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-41, 3304)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("chat_screen/boss_chat:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect/boss_1/Label:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/Choice:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect4:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect4/boss_yes/Label:visible_ratio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect5:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect5/boss_1/Label:visible_ratio")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_su6sf"]
+resource_name = "boss_chat"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("chat_screen/boss_chat:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.09),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect/boss_1/Label:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.09, 3.53333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/Choice:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect3:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_mpuhk"]
+resource_name = "boss_chat1_no"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect3:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect5:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.19),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect5/boss_1/Label:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.19, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_nl3on"]
+resource_name = "boss_chat1_yes"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/Choice:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.19),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect4:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.26),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect4/boss_yes/Label:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 1.53333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k01lb"]
+_data = {
+&"Chat_popout": SubResource("Animation_k01lb"),
+&"Chat_popup": SubResource("Animation_5qbti"),
+&"RESET": SubResource("Animation_gvr3l"),
+&"boss_chat": SubResource("Animation_su6sf"),
+&"boss_chat1_no": SubResource("Animation_mpuhk"),
+&"boss_chat1_yes": SubResource("Animation_nl3on")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_cxisf"]
+font = ExtResource("6_gvr3l")
+font_size = 300
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cxisf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_su6sf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nl3on"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mpuhk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ssc4f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s0fja"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_el7ve"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yfstv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_drt2y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5n7tr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gyukw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nl3on"]
+font_size = 20
+
+[sub_resource type="Animation" id="Animation_f08rc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("case:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("case:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1356, 1004)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("case:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(612, 49)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("case/ScrollContainer:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_3u7g2"]
+resource_name = "case_popout"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("case:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("case:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1356, 1004), Vector2(351, 334)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("case/ScrollContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_cxisf"]
+resource_name = "case_popup"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("case:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(612, 49)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("case:size")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(351, 334), Vector2(1356, 1004)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("case/ScrollContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_su6sf"]
+_data = {
+&"RESET": SubResource("Animation_f08rc"),
+&"case_popout": SubResource("Animation_3u7g2"),
+&"case_popup": SubResource("Animation_cxisf")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_mpuhk"]
+font_size = 40
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_gvr3l")
+
+[node name="Desktop" type="Sprite2D" parent="."]
+position = Vector2(960, 534)
+scale = Vector2(1.00104, 0.992593)
+texture = ExtResource("1_guiot")
+metadata/_edit_lock_ = true
+
+[node name="windowsManeger" type="Node2D" parent="."]
+script = ExtResource("2_ppd22")
+
+[node name="NinePatchRect" parent="windowsManeger" instance=ExtResource("3_3cebx")]
+visible = false
+offset_left = 619.0
+offset_top = 124.0
+offset_right = 970.0
+offset_bottom = 458.0
+
+[node name="CollisionShape2D" parent="windowsManeger/NinePatchRect/Area2D" index="0"]
+position = Vector2(479, 165)
+
+[node name="close_windows" type="Button" parent="windowsManeger/NinePatchRect/Area2D" index="1"]
+offset_left = 764.0
+offset_top = 141.0
+offset_right = 824.0
+offset_bottom = 184.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bapa2")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_cw5uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x33gs")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_2paaw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_qoa54")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_dc58s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_aal8k")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_p0rpq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gyukw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_up1iy")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6wqfp")
+
+[node name="windows" type="AnimationPlayer" parent="windowsManeger"]
+libraries = {
+&"": SubResource("AnimationLibrary_sypnp")
+}
+
+[node name="Chat" type="Node2D" parent="."]
+position = Vector2(0, 1)
+script = ExtResource("4_462ap")
+
+[node name="chat_screen" type="NinePatchRect" parent="Chat"]
+offset_left = -41.0
+offset_top = 3304.0
+offset_right = 830.0
+offset_bottom = 4289.0
+mouse_default_cursor_shape = 3
+texture = ExtResource("5_5qbti")
+patch_margin_left = 200
+patch_margin_top = 208
+patch_margin_right = 207
+patch_margin_bottom = 166
+metadata/_edit_lock_ = true
+
+[node name="Backbutton" type="TextureButton" parent="Chat/chat_screen"]
+layout_mode = 2
+offset_left = 124.0
+offset_top = 39.0
+offset_right = 615.0
+offset_bottom = 171.0
+texture_normal = ExtResource("17_yfstv")
+
+[node name="Label" type="Label" parent="Chat/chat_screen/Backbutton"]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 9.0
+offset_right = 377.0
+offset_bottom = 101.0
+text = "BACK"
+label_settings = SubResource("LabelSettings_bapa2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Chat/chat_screen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.168
+anchor_top = 0.139
+anchor_right = 0.375
+anchor_bottom = 0.189
+offset_left = -1.32802
+offset_top = 8.08499
+offset_right = -13.625
+offset_bottom = -4.16501
+text = "Chat Headed"
+label_settings = SubResource("LabelSettings_k01lb")
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="Chat/chat_screen"]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 143.0
+offset_right = 727.0
+offset_bottom = 182.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_123pn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_3u7g2")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_f08rc")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_462ap")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5qbti")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gvr3l")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_k01lb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_42d7r")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sypnp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_0g8r3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cb6ix")
+
+[node name="boss_chat" type="ScrollContainer" parent="Chat/chat_screen"]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 203.0
+offset_right = 725.0
+offset_bottom = 740.0
+mouse_filter = 0
+theme = SubResource("Theme_gvr3l")
+metadata/_edit_lock_ = true
+
+[node name="boss_chat_VBoxContainer" type="VBoxContainer" parent="Chat/chat_screen/boss_chat"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 20
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("12_su6sf")
+
+[node name="boss_1" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect" instance=ExtResource("9_s0fja")]
+layout_mode = 0
+offset_left = -116.0
+offset_top = -120.0
+offset_right = 405.0
+offset_bottom = 288.0
+
+[node name="Label" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect/boss_1" index="0"]
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Choice" type="TextureRect" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("12_su6sf")
+
+[node name="player_yes" type="NinePatchRect" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/Choice"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -409.0
+offset_right = 973.0
+offset_bottom = 472.0
+texture = ExtResource("14_mpuhk")
+region_rect = Rect2(0, 0, 1593, 951)
+patch_margin_left = 432
+patch_margin_top = 424
+patch_margin_right = 425
+patch_margin_bottom = 423
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/Choice/player_yes"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.416
+anchor_top = 0.363
+anchor_right = 0.585
+anchor_bottom = 0.536
+offset_left = -0.424011
+offset_top = 86.197
+offset_right = 0.434937
+offset_bottom = -0.216003
+text = "YES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="yes_Button_c1" type="Button" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/Choice/player_yes"]
+z_index = 1000
+layout_mode = 0
+offset_left = 412.0
+offset_top = 405.0
+offset_right = 582.0
+offset_bottom = 471.0
+
+[node name="player_no" type="NinePatchRect" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/Choice"]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -323.0
+offset_right = 974.0
+offset_bottom = 558.0
+texture = ExtResource("14_mpuhk")
+region_rect = Rect2(0, 0, 1593, 951)
+patch_margin_left = 432
+patch_margin_top = 424
+patch_margin_right = 425
+patch_margin_bottom = 423
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/Choice/player_no"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.303
+anchor_top = 0.363
+anchor_right = 0.38
+anchor_bottom = 0.419
+offset_left = 111.333
+offset_top = 86.197
+offset_right = 203.18
+offset_bottom = 102.861
+text = "No"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="no_Button_c1" type="Button" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/Choice/player_no"]
+z_index = 1000
+layout_mode = 0
+offset_left = 413.0
+offset_top = 408.0
+offset_right = 577.0
+offset_bottom = 468.0
+
+[node name="TextureRect2" type="TextureRect" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("12_su6sf")
+
+[node name="player_yes" type="NinePatchRect" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect2"]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -375.0
+offset_right = 963.0
+offset_bottom = 506.0
+texture = ExtResource("14_mpuhk")
+region_rect = Rect2(0, 0, 1593, 951)
+patch_margin_left = 432
+patch_margin_top = 424
+patch_margin_right = 425
+patch_margin_bottom = 423
+
+[node name="Label" type="Label" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect2/player_yes"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.303
+anchor_top = 0.363
+anchor_right = 0.38
+anchor_bottom = 0.419
+offset_left = 111.333
+offset_top = 86.197
+offset_right = 203.18
+offset_bottom = 102.861
+text = "YES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("12_su6sf")
+metadata/_edit_lock_ = true
+
+[node name="player_no" type="NinePatchRect" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect3"]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -375.0
+offset_right = 963.0
+offset_bottom = 506.0
+texture = ExtResource("14_mpuhk")
+region_rect = Rect2(0, 0, 1593, 951)
+patch_margin_left = 432
+patch_margin_top = 424
+patch_margin_right = 425
+patch_margin_bottom = 423
+
+[node name="Label" type="Label" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect3/player_no"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.303
+anchor_top = 0.363
+anchor_right = 0.38
+anchor_bottom = 0.419
+offset_left = 111.333
+offset_top = 86.197
+offset_right = 203.18
+offset_bottom = 102.861
+text = "NO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("12_su6sf")
+
+[node name="boss_yes" type="NinePatchRect" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect4"]
+layout_mode = 0
+offset_left = -117.0
+offset_top = -127.0
+offset_right = 404.0
+offset_bottom = 281.0
+texture = ExtResource("13_nl3on")
+patch_margin_left = 152
+patch_margin_top = 144
+patch_margin_right = 149
+patch_margin_bottom = 144
+
+[node name="Label" type="Label" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect4/boss_yes"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.303
+anchor_top = 0.363
+anchor_right = 0.38
+anchor_bottom = 0.419
+offset_left = -13.863
+offset_top = -2.104
+offset_right = 182.02
+offset_bottom = 93.048
+text = "Very good
+get used to this systerm
+BYE BYE
+:D"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="TextureRect5" type="TextureRect" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("12_su6sf")
+
+[node name="boss_1" type="NinePatchRect" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect5"]
+layout_mode = 0
+offset_left = -117.0
+offset_top = -127.0
+offset_right = 404.0
+offset_bottom = 281.0
+texture = ExtResource("13_nl3on")
+patch_margin_left = 152
+patch_margin_top = 144
+patch_margin_right = 149
+patch_margin_bottom = 144
+
+[node name="Label" type="Label" parent="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect5/boss_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.303
+anchor_top = 0.363
+anchor_right = 0.38
+anchor_bottom = 0.419
+offset_left = -13.863
+offset_top = -2.104
+offset_right = 182.02
+offset_bottom = 93.048
+text = ".............
+GET OUT 
+I DON'T LIKE YOU"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="all_chat2" type="ScrollContainer" parent="Chat/chat_screen"]
+visible = false
+layout_mode = 0
+offset_left = 148.0
+offset_top = 203.0
+offset_right = 725.0
+offset_bottom = 740.0
+mouse_filter = 0
+theme = SubResource("Theme_gvr3l")
+metadata/_edit_lock_ = true
+
+[node name="chat_VBoxContainer" type="VBoxContainer" parent="Chat/chat_screen/all_chat2"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 20
+
+[node name="chat_1" type="TextureButton" parent="Chat/chat_screen/all_chat2/chat_VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_sypnp")
+
+[node name="TextureRect" type="TextureRect" parent="Chat/chat_screen/all_chat2/chat_VBoxContainer/chat_1"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 28.0
+offset_right = 146.0
+offset_bottom = 167.0
+texture = ExtResource("10_0g8r3")
+
+[node name="Label" type="Label" parent="Chat/chat_screen/all_chat2/chat_VBoxContainer/chat_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.253
+anchor_top = 0.1
+anchor_right = 0.528
+anchor_bottom = 0.215
+offset_left = 37.79
+offset_top = 10.0
+offset_right = 150.04
+offset_bottom = 139.0
+text = "หัวหน้า"
+label_settings = SubResource("LabelSettings_f08rc")
+
+[node name="boss_chat_card" type="Button" parent="Chat/chat_screen/all_chat2/chat_VBoxContainer/chat_1"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 575.0
+offset_bottom = 201.0
+
+[node name="chat_2" type="TextureButton" parent="Chat/chat_screen/all_chat2/chat_VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_sypnp")
+
+[node name="TextureRect" type="TextureRect" parent="Chat/chat_screen/all_chat2/chat_VBoxContainer/chat_2"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 28.0
+offset_right = 146.0
+offset_bottom = 167.0
+texture = ExtResource("11_123pn")
+
+[node name="Label" type="Label" parent="Chat/chat_screen/all_chat2/chat_VBoxContainer/chat_2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.253
+anchor_top = 0.1
+anchor_right = 0.528
+anchor_bottom = 0.215
+offset_left = 37.79
+offset_top = 10.0
+offset_right = 150.04
+offset_bottom = 139.0
+text = "แม่"
+label_settings = SubResource("LabelSettings_f08rc")
+
+[node name="chat_3" type="TextureButton" parent="Chat/chat_screen/all_chat2/chat_VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_sypnp")
+
+[node name="TextureRect" type="TextureRect" parent="Chat/chat_screen/all_chat2/chat_VBoxContainer/chat_3"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 28.0
+offset_right = 146.0
+offset_bottom = 167.0
+texture = ExtResource("12_3u7g2")
+
+[node name="Label" type="Label" parent="Chat/chat_screen/all_chat2/chat_VBoxContainer/chat_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.253
+anchor_top = 0.1
+anchor_right = 0.528
+anchor_bottom = 0.215
+offset_left = 37.79
+offset_top = 10.0
+offset_right = 150.04
+offset_bottom = 139.0
+text = "ผัว"
+label_settings = SubResource("LabelSettings_f08rc")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Chat/chat_screen"]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 201.0
+offset_right = 726.0
+offset_bottom = 750.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Chat/chat_screen/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="chat_icon_template" parent="Chat/chat_screen/ScrollContainer/VBoxContainer" instance=ExtResource("16_el7ve")]
+visible = false
+layout_mode = 2
+
+[node name="Chat" type="ScrollContainer" parent="Chat/chat_screen"]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 197.0
+offset_right = 724.0
+offset_bottom = 755.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Chat/chat_screen/Chat"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="Chat/chat_screen/Chat/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_sypnp")
+
+[node name="chat_detail" type="Label" parent="Chat/chat_screen/Chat/VBoxContainer/TextureRect"]
+layout_mode = 0
+offset_right = 573.0
+offset_bottom = 194.0
+text = "Text"
+label_settings = SubResource("LabelSettings_yfstv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Chat"]
+libraries = {
+&"": SubResource("AnimationLibrary_k01lb")
+}
+
+[node name="App icon" type="Node2D" parent="."]
+position = Vector2(99, 87)
+metadata/_edit_lock_ = true
+
+[node name="FlowContainer" type="FlowContainer" parent="App icon"]
+offset_left = 9.0
+offset_top = 24.0
+offset_right = 1316.0
+offset_bottom = 154.0
+theme_override_constants/h_separation = 40
+metadata/_edit_lock_ = true
+
+[node name="chat_app" type="TextureButton" parent="App icon/FlowContainer"]
+layout_mode = 2
+texture_normal = ExtResource("12_123pn")
+
+[node name="TextureRect" type="TextureRect" parent="App icon/FlowContainer/chat_app"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 79.0
+offset_right = 886.0
+offset_bottom = 879.0
+scale = Vector2(0.079, 0.079)
+texture = ExtResource("13_3u7g2")
+
+[node name="Label" type="Label" parent="App icon/FlowContainer/chat_app/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.254
+anchor_bottom = 0.376
+offset_left = 316.456
+offset_top = 202.532
+offset_right = 670.256
+offset_bottom = 812.732
+text = "1
+
+"
+label_settings = SubResource("LabelSettings_cxisf")
+
+[node name="case_app" type="TextureButton" parent="App icon/FlowContainer"]
+layout_mode = 2
+texture_normal = ExtResource("14_f08rc")
+
+[node name="TextureRect" type="TextureRect" parent="App icon/FlowContainer/case_app"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 79.0
+offset_right = 886.0
+offset_bottom = 879.0
+scale = Vector2(0.079, 0.079)
+texture = ExtResource("13_3u7g2")
+
+[node name="Label" type="Label" parent="App icon/FlowContainer/case_app/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.254
+anchor_bottom = 0.376
+offset_left = 316.456
+offset_top = 202.532
+offset_right = 670.256
+offset_bottom = 812.732
+text = "5
+
+"
+label_settings = SubResource("LabelSettings_cxisf")
+
+[node name="guideline-app" type="TextureButton" parent="App icon/FlowContainer"]
+layout_mode = 2
+texture_normal = ExtResource("18_nl3on")
+
+[node name="Case" type="Node2D" parent="."]
+script = ExtResource("15_3u7g2")
+
+[node name="case" parent="Case" instance=ExtResource("3_3cebx")]
+visible = false
+offset_left = 612.0
+offset_top = 49.0
+offset_right = 1967.99
+offset_bottom = 1053.0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="Case/case/Area2D" index="0"]
+position = Vector2(678.25, 165)
+
+[node name="Button" type="Button" parent="Case/case/Area2D" index="1"]
+offset_left = 1148.0
+offset_top = 144.0
+offset_right = 1215.0
+offset_bottom = 181.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cxisf")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_su6sf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_nl3on")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_mpuhk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ssc4f")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_s0fja")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_el7ve")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_yfstv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_drt2y")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5n7tr")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gyukw")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Case/case"]
+visible = false
+z_index = 20
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.122
+anchor_bottom = 0.192
+offset_left = 156.0
+offset_top = 205.0
+offset_right = 1035.57
+offset_bottom = 656.232
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Case/case/ScrollContainer"]
+z_index = 5
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+
+[node name="problem1" parent="Case/case/ScrollContainer/VBoxContainer" instance=ExtResource("20_ssc4f")]
+visible = false
+layout_mode = 2
+
+[node name="problem1_button" parent="Case/case/ScrollContainer/VBoxContainer/problem1" index="3"]
+z_index = 1000
+
+[node name="Label" type="Label" parent="Case/case"]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 144.0
+offset_right = 303.0
+offset_bottom = 184.0
+text = "CASE TODAY"
+label_settings = SubResource("LabelSettings_nl3on")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="case2" type="AnimationPlayer" parent="Case"]
+libraries = {
+&"": SubResource("AnimationLibrary_su6sf")
+}
+
+[node name="Guideline" type="Node2D" parent="."]
+script = ExtResource("20_mpuhk")
+
+[node name="guidline" parent="Guideline" instance=ExtResource("3_3cebx")]
+visible = false
+offset_left = 612.0
+offset_top = 49.0
+offset_right = 1968.0
+offset_bottom = 1053.0
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="Guideline/guidline/Area2D" index="0"]
+position = Vector2(678.25, 165)
+
+[node name="guidline" type="Label" parent="Guideline/guidline/Area2D" index="1"]
+offset_left = 157.0
+offset_top = 144.0
+offset_right = 303.0
+offset_bottom = 184.0
+text = "CASE TODAY"
+label_settings = SubResource("LabelSettings_nl3on")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="close_guideline" type="Button" parent="Guideline/guidline/Area2D" index="2"]
+offset_left = 1149.0
+offset_top = 142.0
+offset_right = 1213.0
+offset_bottom = 183.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Guideline/guidline"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.122
+anchor_bottom = 0.192
+offset_left = 156.0
+offset_top = 205.0
+offset_right = 1035.57
+offset_bottom = 656.232
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Guideline/guidline/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+
+[node name="problem1" type="TextureRect" parent="Guideline/guidline/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_sypnp")
+
+[node name="Label" type="Label" parent="Guideline/guidline/ScrollContainer/VBoxContainer/problem1"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 568.0
+offset_bottom = 196.0
+text = "วิธีรับมือเก"
+label_settings = SubResource("LabelSettings_mpuhk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="problem2" type="TextureRect" parent="Guideline/guidline/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_sypnp")
+
+[node name="Label" type="Label" parent="Guideline/guidline/ScrollContainer/VBoxContainer/problem2"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 568.0
+offset_bottom = 196.0
+text = "วิธีรับมือโดนเกจีบ"
+label_settings = SubResource("LabelSettings_mpuhk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="problem3" type="TextureRect" parent="Guideline/guidline/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_sypnp")
+
+[node name="Label" type="Label" parent="Guideline/guidline/ScrollContainer/VBoxContainer/problem3"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 571.0
+offset_bottom = 196.0
+text = "วิธีรับมือโดนเกส่งเมลมาหลอก"
+label_settings = SubResource("LabelSettings_mpuhk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="problem4" type="TextureRect" parent="Guideline/guidline/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_sypnp")
+
+[node name="Label" type="Label" parent="Guideline/guidline/ScrollContainer/VBoxContainer/problem4"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 568.0
+offset_bottom = 196.0
+text = "วิธีรับมือโดน call center โทรมา"
+label_settings = SubResource("LabelSettings_mpuhk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Chat/chat_screen/Backbutton" to="Chat" method="_on_backbutton_pressed"]
+[connection signal="pressed" from="Chat/chat_screen/Button" to="Chat" method="_on_button_pressed"]
+[connection signal="pressed" from="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/Choice/player_yes/yes_Button_c1" to="Chat" method="_on_yes_button_c_1_pressed"]
+[connection signal="pressed" from="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/Choice/player_no/no_Button_c1" to="Chat" method="_on_no_button_c_1_pressed"]
+[connection signal="pressed" from="Chat/chat_screen/all_chat2/chat_VBoxContainer/chat_1/boss_chat_card" to="Chat" method="_on_boss_chat_card_pressed"]
+[connection signal="pressed" from="App icon/FlowContainer/chat_app" to="Chat" method="_on_chat_app_pressed"]
+[connection signal="pressed" from="App icon/FlowContainer/case_app" to="Case" method="_on_case_app_pressed"]
+[connection signal="pressed" from="App icon/FlowContainer/guideline-app" to="Guideline" method="_on_guidelineapp_pressed"]
+[connection signal="pressed" from="Case/case/Area2D/Button" to="Case" method="_on_button_pressed"]
+[connection signal="pressed" from="Guideline/guidline/Area2D/close_guideline" to="Guideline" method="_on_close_guideline_pressed"]
+
+[editable path="windowsManeger/NinePatchRect"]
+[editable path="Chat/chat_screen/boss_chat/boss_chat_VBoxContainer/TextureRect/boss_1"]
+[editable path="Case/case"]
+[editable path="Case/case/ScrollContainer/VBoxContainer/problem1"]
+[editable path="Guideline/guidline"]

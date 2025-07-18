@@ -1,0 +1,519 @@
+[gd_scene load_steps=50 format=3 uid="uid://dxolj4wittthb"]
+
+[ext_resource type="Texture2D" uid="uid://cmbmtk6sp5phm" path="res://assets/img/Desktop.png" id="1_guiot"]
+[ext_resource type="Script" uid="uid://yybv3jgaowck" path="res://scene/node_2d.gd" id="1_gvr3l"]
+[ext_resource type="Script" uid="uid://dxb5o4wxkl4np" path="res://scene/windows_maneger.gd" id="2_ppd22"]
+[ext_resource type="PackedScene" uid="uid://lvlscd8b1bii" path="res://scene/contentWindow.tscn" id="3_3cebx"]
+[ext_resource type="Script" uid="uid://dvnryc5kqg85b" path="res://scene/chat.gd" id="4_462ap"]
+[ext_resource type="Texture2D" uid="uid://cxfxnpocb62g0" path="res://assets/img/Windows.png" id="5_5qbti"]
+[ext_resource type="FontFile" uid="uid://b7if6iny5c6gk" path="res://assets/font/NotoSansThai-VariableFont_wdth,wght.ttf" id="6_gvr3l"]
+[ext_resource type="Texture2D" uid="uid://b78h800kthuuu" path="res://assets/img/user_chat.png" id="8_sypnp"]
+[ext_resource type="Texture2D" uid="uid://dihs4rme3ycui" path="res://assets/img/demo_cilent_pic/1.svg" id="10_0g8r3"]
+[ext_resource type="Texture2D" uid="uid://dg7p01msegu8n" path="res://assets/img/demo_cilent_pic/3.svg" id="11_123pn"]
+[ext_resource type="Texture2D" uid="uid://bmf63kp5rpn27" path="res://assets/img/demo_cilent_pic/2.svg" id="12_3u7g2"]
+[ext_resource type="Texture2D" uid="uid://uq3gceil3ubm" path="res://assets/img/app_icon/chat.svg" id="12_123pn"]
+[ext_resource type="Texture2D" uid="uid://gx7qrcjcjkvh" path="res://assets/img/app_icon/notification.svg" id="13_3u7g2"]
+[ext_resource type="Texture2D" uid="uid://oenc0dgwaky7" path="res://assets/img/app_icon/case.svg" id="14_f08rc"]
+[ext_resource type="Script" uid="uid://bvbmqeb41t460" path="res://scene/case.gd" id="15_3u7g2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bapa2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cw5uo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x33gs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2paaw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qoa54"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dc58s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aal8k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p0rpq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gyukw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_up1iy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6wqfp"]
+
+[sub_resource type="Animation" id="Animation_42d7r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NinePatchRect:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(351, 334)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NinePatchRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NinePatchRect:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(619, 124)]
+}
+
+[sub_resource type="Animation" id="Animation_sypnp"]
+resource_name = "WindowsPopout"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NinePatchRect:size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(968, 719), Vector2(351, 334)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NinePatchRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_cb6ix"]
+resource_name = "WindowsPopup"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NinePatchRect:size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(351, 334), Vector2(968, 719)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NinePatchRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(619, 124)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sypnp"]
+_data = {
+&"RESET": SubResource("Animation_42d7r"),
+&"WindowsPopout": SubResource("Animation_sypnp"),
+&"WindowsPopup": SubResource("Animation_cb6ix")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_k01lb"]
+resource_local_to_scene = true
+font = ExtResource("6_gvr3l")
+font_size = 24
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_123pn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3u7g2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f08rc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_462ap"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5qbti"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gvr3l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k01lb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_42d7r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sypnp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0g8r3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cb6ix"]
+
+[sub_resource type="Theme" id="Theme_gvr3l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f08rc"]
+font = ExtResource("6_gvr3l")
+font_size = 100
+
+[sub_resource type="Animation" id="Animation_k01lb"]
+resource_name = "Chat_popout"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("chat_screen:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-41, 304), Vector2(-41, 1004)]
+}
+
+[sub_resource type="Animation" id="Animation_5qbti"]
+resource_name = "Chat_popup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("chat_screen:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.99),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-41, 1004), Vector2(-41, 304)]
+}
+
+[sub_resource type="Animation" id="Animation_gvr3l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("chat_screen:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-41, 3304)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k01lb"]
+_data = {
+&"Chat_popout": SubResource("Animation_k01lb"),
+&"Chat_popup": SubResource("Animation_5qbti"),
+&"RESET": SubResource("Animation_gvr3l")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_cxisf"]
+font = ExtResource("6_gvr3l")
+font_size = 300
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_gvr3l")
+
+[node name="Desktop" type="Sprite2D" parent="."]
+position = Vector2(960, 534)
+scale = Vector2(1.00104, 0.992593)
+texture = ExtResource("1_guiot")
+
+[node name="windowsManeger" type="Node2D" parent="."]
+script = ExtResource("2_ppd22")
+
+[node name="NinePatchRect" parent="windowsManeger" instance=ExtResource("3_3cebx")]
+visible = false
+offset_left = 619.0
+offset_top = 124.0
+offset_right = 970.0
+offset_bottom = 458.0
+
+[node name="close_windows" type="Button" parent="windowsManeger/NinePatchRect/Area2D" index="1"]
+offset_left = 764.0
+offset_top = 141.0
+offset_right = 824.0
+offset_bottom = 184.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bapa2")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_cw5uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x33gs")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_2paaw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_qoa54")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_dc58s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_aal8k")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_p0rpq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gyukw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_up1iy")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6wqfp")
+
+[node name="windows" type="AnimationPlayer" parent="windowsManeger"]
+libraries = {
+&"": SubResource("AnimationLibrary_sypnp")
+}
+
+[node name="Chat" type="Node2D" parent="."]
+script = ExtResource("4_462ap")
+
+[node name="chat_screen" type="NinePatchRect" parent="Chat"]
+offset_left = -41.0
+offset_top = 3304.0
+offset_right = 830.0
+offset_bottom = 4289.0
+mouse_default_cursor_shape = 3
+texture = ExtResource("5_5qbti")
+patch_margin_left = 200
+patch_margin_top = 208
+patch_margin_right = 207
+patch_margin_bottom = 166
+
+[node name="Label" type="Label" parent="Chat/chat_screen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.168
+anchor_top = 0.139
+anchor_right = 0.375
+anchor_bottom = 0.189
+offset_left = -1.32802
+offset_top = 8.08499
+offset_right = -13.625
+offset_bottom = -4.16501
+text = "Chat Headed"
+label_settings = SubResource("LabelSettings_k01lb")
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="Chat/chat_screen"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 149.0
+offset_right = 723.0
+offset_bottom = 178.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_123pn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_3u7g2")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_f08rc")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_462ap")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5qbti")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gvr3l")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_k01lb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_42d7r")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sypnp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_0g8r3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cb6ix")
+
+[node name="all_chat" type="ScrollContainer" parent="Chat/chat_screen"]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 203.0
+offset_right = 725.0
+offset_bottom = 740.0
+mouse_filter = 0
+theme = SubResource("Theme_gvr3l")
+
+[node name="chat_VBoxContainer" type="VBoxContainer" parent="Chat/chat_screen/all_chat"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.08
+theme_override_constants/separation = 20
+
+[node name="chat_1" type="TextureButton" parent="Chat/chat_screen/all_chat/chat_VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_sypnp")
+
+[node name="TextureRect" type="TextureRect" parent="Chat/chat_screen/all_chat/chat_VBoxContainer/chat_1"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 28.0
+offset_right = 146.0
+offset_bottom = 167.0
+texture = ExtResource("10_0g8r3")
+
+[node name="Label" type="Label" parent="Chat/chat_screen/all_chat/chat_VBoxContainer/chat_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.253
+anchor_top = 0.1
+anchor_right = 0.528
+anchor_bottom = 0.215
+offset_left = 37.79
+offset_top = 10.0
+offset_right = 150.04
+offset_bottom = 139.0
+text = "หัวหน้า"
+label_settings = SubResource("LabelSettings_f08rc")
+
+[node name="chat_2" type="TextureButton" parent="Chat/chat_screen/all_chat/chat_VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_sypnp")
+
+[node name="TextureRect" type="TextureRect" parent="Chat/chat_screen/all_chat/chat_VBoxContainer/chat_2"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 28.0
+offset_right = 146.0
+offset_bottom = 167.0
+texture = ExtResource("11_123pn")
+
+[node name="Label" type="Label" parent="Chat/chat_screen/all_chat/chat_VBoxContainer/chat_2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.253
+anchor_top = 0.1
+anchor_right = 0.528
+anchor_bottom = 0.215
+offset_left = 37.79
+offset_top = 10.0
+offset_right = 150.04
+offset_bottom = 139.0
+text = "แม่"
+label_settings = SubResource("LabelSettings_f08rc")
+
+[node name="chat_3" type="TextureButton" parent="Chat/chat_screen/all_chat/chat_VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_sypnp")
+
+[node name="TextureRect" type="TextureRect" parent="Chat/chat_screen/all_chat/chat_VBoxContainer/chat_3"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 28.0
+offset_right = 146.0
+offset_bottom = 167.0
+texture = ExtResource("12_3u7g2")
+
+[node name="Label" type="Label" parent="Chat/chat_screen/all_chat/chat_VBoxContainer/chat_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.253
+anchor_top = 0.1
+anchor_right = 0.528
+anchor_bottom = 0.215
+offset_left = 37.79
+offset_top = 10.0
+offset_right = 150.04
+offset_bottom = 139.0
+text = "ผัว"
+label_settings = SubResource("LabelSettings_f08rc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Chat"]
+libraries = {
+&"": SubResource("AnimationLibrary_k01lb")
+}
+
+[node name="App icon" type="Node2D" parent="."]
+position = Vector2(99, 87)
+
+[node name="FlowContainer" type="FlowContainer" parent="App icon"]
+offset_right = 1307.0
+offset_bottom = 130.0
+theme_override_constants/h_separation = 40
+
+[node name="chat_app" type="TextureButton" parent="App icon/FlowContainer"]
+layout_mode = 2
+texture_normal = ExtResource("12_123pn")
+
+[node name="TextureRect" type="TextureRect" parent="App icon/FlowContainer/chat_app"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 79.0
+offset_right = 886.0
+offset_bottom = 879.0
+scale = Vector2(0.079, 0.079)
+texture = ExtResource("13_3u7g2")
+
+[node name="Label" type="Label" parent="App icon/FlowContainer/chat_app/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.254
+anchor_bottom = 0.376
+offset_left = 316.456
+offset_top = 202.532
+offset_right = 670.256
+offset_bottom = 812.732
+text = "1
+
+"
+label_settings = SubResource("LabelSettings_cxisf")
+
+[node name="case_app" type="TextureButton" parent="App icon/FlowContainer"]
+layout_mode = 2
+texture_normal = ExtResource("14_f08rc")
+
+[node name="TextureRect" type="TextureRect" parent="App icon/FlowContainer/case_app"]
+offset_left = 86.0
+offset_top = 79.0
+offset_right = 886.0
+offset_bottom = 879.0
+scale = Vector2(0.079, 0.079)
+texture = ExtResource("13_3u7g2")
+
+[node name="Label" type="Label" parent="App icon/FlowContainer/case_app/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.254
+anchor_bottom = 0.376
+offset_left = 316.456
+offset_top = 202.532
+offset_right = 670.256
+offset_bottom = 812.732
+text = "5
+
+"
+label_settings = SubResource("LabelSettings_cxisf")
+
+[node name="Case" type="Node2D" parent="."]
+script = ExtResource("15_3u7g2")
+
+[node name="case" parent="Case" instance=ExtResource("3_3cebx")]
+offset_left = 580.0
+offset_top = 90.0
+offset_right = 1936.0
+offset_bottom = 1094.0
+
+[node name="CollisionShape2D" parent="Case/case/Area2D" index="0"]
+position = Vector2(678.25, 165)
+
+[node name="close_case" type="Button" parent="Case/case/Area2D/CollisionShape2D" index="0"]
+offset_left = 764.0
+offset_top = 141.0
+offset_right = 824.0
+offset_bottom = 184.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bapa2")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_cw5uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x33gs")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_2paaw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_qoa54")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_dc58s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_aal8k")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_p0rpq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gyukw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_up1iy")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6wqfp")
+
+[connection signal="pressed" from="windowsManeger/NinePatchRect/Area2D/close_windows" to="windowsManeger" method="_on_close_windows_pressed"]
+[connection signal="pressed" from="Chat/chat_screen/Button" to="Chat" method="_on_button_pressed"]
+[connection signal="pressed" from="Chat/chat_screen/all_chat/chat_VBoxContainer/chat_1" to="windowsManeger" method="_on_chat_1_pressed"]
+[connection signal="pressed" from="Chat/chat_screen/all_chat/chat_VBoxContainer/chat_2" to="windowsManeger" method="_on_chat_1_pressed"]
+[connection signal="pressed" from="Chat/chat_screen/all_chat/chat_VBoxContainer/chat_3" to="windowsManeger" method="_on_chat_1_pressed"]
+[connection signal="pressed" from="App icon/FlowContainer/chat_app" to="Chat" method="_on_chat_app_pressed"]
+[connection signal="pressed" from="Case/case/Area2D/CollisionShape2D/close_case" to="Case" method="_on_close_case_pressed"]
+
+[editable path="windowsManeger/NinePatchRect"]
+[editable path="Case/case"]

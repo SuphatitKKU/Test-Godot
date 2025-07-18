@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://lvlscd8b1bii"]
+
+[ext_resource type="Texture2D" uid="uid://cxfxnpocb62g0" path="res://assets/img/Windows.png" id="1_ab67e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgttd"]
+size = Vector2(691, 54.5)
+
+[node name="NinePatchRect" type="NinePatchRect"]
+offset_left = 371.0
+offset_top = 144.0
+offset_right = 1339.0
+offset_bottom = 863.0
+texture = ExtResource("1_ab67e")
+patch_margin_left = 136
+patch_margin_top = 192
+patch_margin_right = 215
+patch_margin_bottom = 142
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(484, 165)
+shape = SubResource("RectangleShape2D_lgttd")

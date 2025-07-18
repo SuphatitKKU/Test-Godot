@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2kyx7mqeylgl"]
+
+[ext_resource type="Texture2D" uid="uid://l81dtd8h8via" path="res://assets/img/Rectangle 35.png" id="1_fgwsh"]
+
+[node name="boss_1" type="NinePatchRect"]
+offset_left = -117.0
+offset_top = -127.0
+offset_right = 404.0
+offset_bottom = 281.0
+texture = ExtResource("1_fgwsh")
+patch_margin_left = 152
+patch_margin_top = 144
+patch_margin_right = 149
+patch_margin_bottom = 144
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.303
+anchor_top = 0.363
+anchor_right = 0.38
+anchor_bottom = 0.419
+offset_left = -13.863
+offset_top = -2.104
+offset_right = 182.02
+offset_bottom = 93.048
+text = "HELLO
+My name is ....
+BIG DICK
+DO YOU UNDERSTAND!!!!"

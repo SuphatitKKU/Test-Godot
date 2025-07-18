@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7wy1opqkv6oy"]
+
+[ext_resource type="Texture2D" uid="uid://b78h800kthuuu" path="res://assets/img/user_chat.png" id="1_avysy"]
+[ext_resource type="Texture2D" uid="uid://dihs4rme3ycui" path="res://assets/img/demo_cilent_pic/1.svg" id="2_vw2d6"]
+[ext_resource type="Texture2D" uid="uid://cxv84dk227ltm" path="res://assets/img/user_chat (1).png" id="3_54cgp"]
+[ext_resource type="FontFile" uid="uid://b7if6iny5c6gk" path="res://assets/font/NotoSansThai-VariableFont_wdth,wght.ttf" id="4_pl6jw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_su6sf"]
+font = ExtResource("4_pl6jw")
+font_size = 100
+shadow_size = 600
+shadow_color = Color(0.644935, 0.212052, 0.476962, 0)
+shadow_offset = Vector2(100, 1)
+
+[node name="problem1" type="TextureRect"]
+texture = ExtResource("1_avysy")
+
+[node name="Avatar" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 29.0
+offset_right = 138.0
+offset_bottom = 168.0
+texture = ExtResource("2_vw2d6")
+
+[node name="case_state_NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 621.0
+offset_top = 68.0
+offset_right = 2141.0
+offset_bottom = 316.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_54cgp")
+region_rect = Rect2(392, 376, 808, 184)
+patch_margin_left = 760
+patch_margin_top = 120
+patch_margin_right = 760
+patch_margin_bottom = 128
+
+[node name="state" type="Label" parent="case_state_NinePatchRect"]
+layout_mode = 0
+offset_right = 1508.0
+offset_bottom = 268.0
+text = "COMPLETE"
+label_settings = SubResource("LabelSettings_su6sf")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 26.0
+offset_right = 266.0
+offset_bottom = 61.0
+text = "NAME : MANEE"
+
+[node name="problem" type="Label" parent="name"]
+layout_mode = 0
+offset_left = 164.0
+offset_right = 292.0
+offset_bottom = 35.0
+text = "PROBLEM : CALL CENTER"
+
+[node name="case_detail" type="Label" parent="name/problem"]
+layout_mode = 0
+offset_left = -154.0
+offset_top = 48.0
+offset_right = 37.0
+offset_bottom = 97.0
+text = "CASE DETAIL
+"
+
+[node name="problem1_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 567.0
+offset_bottom = 199.0
